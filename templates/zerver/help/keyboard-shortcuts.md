@@ -125,6 +125,8 @@ title=":thumbs_up:"/> (`:thumbs_up:`) emoji.
 
 * **Toggle topic mute**: `M` — Allows the user to mute and unmuted the topic of
 the selected message (outlined in blue).
+* **Collapse/uncollapse selected message**: `O` — This shortcut allows the user
+  to collapse/uncollapse the selected message.
 
 ## Menus
 
