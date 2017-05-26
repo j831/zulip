@@ -11,7 +11,9 @@ function show_more_link(row) {
 
 function show_condense_link(row) {
     row.find(".message_expander").hide();
-    row.find(".message_condenser").show();
+    if (row.find(".could-be-condensed").length !== 0) {
+        row.find(".message_condenser").show();
+    }
 }
 
 function condense_row(row) {
@@ -28,14 +30,12 @@ function uncondense_row(row) {
 
 exports.toggle_condense = function (msg) {
     var row = current_msg_list.selected_row();
-    if (row.find(".could-be-condensed").length !== 0) {
-        if (msg.condensed === true) {
-            msg.condensed = false;
-            uncondense_row(row);
-        } else {
-            msg.condensed = true;
-            condense_row(row);
-        }
+    if (msg.condensed === true) {
+        msg.condensed = false;
+        uncondense_row(row);
+    } else {
+        msg.condensed = true;
+        condense_row(row);
     }
 };
 
